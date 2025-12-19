@@ -20,3 +20,5 @@ Figuring out how to actually use the json file I created and print out all the p
 <img width="552" height="323" alt="image" src="https://github.com/user-attachments/assets/82427a60-4335-4044-ba5d-2abb5242a6f6" />
 
 Works fine,
+
+Now I will probably be using argparse in this project like I did with my directory enumerator since I really like how it turned out \
