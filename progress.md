@@ -109,4 +109,22 @@ def load_usernames(filepath):
         return [line.strip() for line in f if line.strip()]
 ```
 
+The query generator will handle what URL we will actually be testing
 
+```python
+def generate_queries(usernames, platform_data):
+    
+    queries = []
+    
+    for user in usernames:
+        for p_name, p_info in platform_data.items():
+            queries.append({
+                "username": user,
+                "platform": p_name,
+                "url": p_info['url_main'].format(username=user),
+                "error_type": p_info.get('errorType'),
+                "error_msg": p_info.get('errorMsg')
+            })
+
+    return queries
+```
