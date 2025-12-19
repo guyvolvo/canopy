@@ -128,3 +128,54 @@ def generate_queries(usernames, platform_data):
 
     return queries
 ```
+
+Added a config.py file 
+
+```python
+DEFAULT_TIMEOUT = 10
+DEFAULT_THREADS = 10
+USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 " \
+             "Safari/537.36"
+```
+
+And started work on the username_checker file 
+
+```python
+import requests
+from config import USER_AGENT
+
+
+def check_username(query, timeout):
+    # These headers make the request look like it's coming from your Chrome browser
+    headers = {
+        "User-Agent": USER_AGENT,
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.5",
+        "DNT": "1",  # Do Not Track request
+        "Connection": "keep-alive",
+        "Upgrade-Insecure-Requests": "1"
+    }
+
+    try:
+        response = requests.get(
+            query['url'],
+            headers=headers,
+            timeout=timeout,
+            allow_redirects=True
+        )
+
+        if response.status_code == 200:
+            return {"status": "FOUND", "platform": query['platform'], "url": query['url']}
+        elif response.status_code == 404:
+            return {"status": "MISSING", "platform": query['platform']}
+        elif response.status_code == 403:
+            return {"status": "BLOCKED", "platform": query['platform']}
+
+    except requests.exceptions.Timeout:
+        return {"status": "TIMEOUT", "platform": query['platform']}
+    except Exception as e:
+        return {"status": "ERROR", "platform": query['platform'], "msg": str(e)}
+
+    return {"status": "MISSING", "platform": query['platform']}
+```
+Pretty barebones but I'll add to it as we go
