@@ -51,7 +51,7 @@ canopy/\
 Claude workflow :
 Canopy/
 ├── main.py                    # Entry point, CLI interface\
-├── osint_platforms.json       # Platform database (already have)\
+├── platforms.json             # Platform database\
 ├── query_generator.py         # Generate queries from usernames\
 ├── username_checker.py        # Check if username exists on platforms\
 ├── data_collector.py          # Collect and aggregate data\
