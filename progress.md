@@ -67,9 +67,10 @@ def main():
     # Output group
     output_group = parser.add_argument_group('Output Options')
     output_group.add_argument('-o', '--output', help='Output file path', type=str)
-    output_group.add_argument('-f', '--format', help='Output format: json, csv, html, txt (default: json)', type=str,
+    output_group.add_argument('-f', '--format', help='Output format: json, csv, html, txt (default: txt)', type=str,
                               choices=['json', 'csv', 'html', 'txt'], default='json')
     output_group.add_argument('-v', '--verbose', help='Verbose output', action='store_true')
     output_group.add_argument('-q', '--quiet', help='Minimal output (only results)', action='store_true')
     output_group.add_argument('--print-found', help='Print found accounts in real-time', action='store_true')
+
 ```
