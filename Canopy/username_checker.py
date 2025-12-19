@@ -6,7 +6,7 @@ import re
 import hashlib
 from config import USER_AGENT
 
-# This global dictionary will be populated by main.py before threads start
+# This global dictionary will be populated by canopy.py before threads start
 fingerprints = {}
 
 
