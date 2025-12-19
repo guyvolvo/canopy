@@ -8,7 +8,7 @@ Note: Canopy was developed and tested exclusively on my own publicly available d
 - Correlate results from multiple sources into meaningful categories
 - Demonstrate ethical boundaries and legal awareness in OSINT work
 
-## Features
+## 💫 Features
 
 - Multi-platform username enumeration across social media, coding sites, gaming platforms, and more.
 - Avoids false positives using fingerprint-based validation.
@@ -18,7 +18,7 @@ Note: Canopy was developed and tested exclusively on my own publicly available d
 - CLI interface for easy integration into scripts or automation workflows.
 - Categorized results for better organization (e.g., social, professional, gaming).
 
-## Installation
+## 📦 Installation
 
 ```bash
 pip install canopy-scanner
@@ -78,7 +78,7 @@ Output Options:
       canopy --list-categories
 ```
 
-### _Legal & Ethical Disclaimer_
+### 📃 _Legal & Ethical Disclamer_
 
 ##### This framework is intended strictly for self-OSINT, educational use, or explicit consent-based research.
 ##### This tool should be used to analyze:
