@@ -19,14 +19,10 @@ Note: Canopy was developed and tested exclusively on my own publicly available d
 - Categorized results for better organization (e.g., social, professional, gaming).
 
 ## Installation
-Clone the repository:
 
 ```bash
-
-pip:
 pip install canopy-scanner
 
-git:
 git clone https://github.com/guyvolvo/Canopy.git
 cd Canopy
 
