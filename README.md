@@ -18,6 +18,55 @@ Note: Canopy was developed and tested exclusively on my own publicly available d
 - CLI interface for easy integration into scripts or automation workflows.
 - Categorized results for better organization (e.g., social, professional, gaming).
 
+```bash
+usage: canopy.py [-h] [-u USERNAME] [-U USERNAMES] [-t THREADS] [--timeout TIMEOUT] [--delay DELAY]
+                 [--rate-limit RATE_LIMIT] [-c CATEGORIES] [-p PLATFORMS] [--exclude EXCLUDE] [--only-found]
+                 [--list-categories] [-o OUTPUT] [-f {json,csv,html,txt}] [-v] [-q] [--print-found]
+
+Canopy - Username Enumeration Tool
+
+options:
+  -h, --help            show this help message and exit
+
+Target Options:
+  -u, --username USERNAME
+                        Username to search for
+  -U, --usernames USERNAMES
+                        File containing list of usernames (one per line)
+
+Performance Options:
+  -t, --threads THREADS
+                        Number of concurrent threads (default: 10)
+  --timeout TIMEOUT     Request timeout in seconds (default: 10)
+  --delay DELAY         Delay between requests in seconds (default: 0)
+  --rate-limit RATE_LIMIT
+                        Max requests per second (default: unlimited)
+
+Filtering Options:
+  -c, --categories CATEGORIES
+                        Comma-separated categories to check (e.g., social,gaming)
+  -p, --platforms PLATFORMS
+                        Comma-separated specific platforms to check
+  --exclude EXCLUDE     Comma-separated platforms to exclude
+  --only-found          Only show found accounts
+  --list-categories     Show all available platform categories and exit
+
+Output Options:
+  -o, --output OUTPUT   Output file path
+  -f, --format {json,csv,html,txt}
+                        Output format: json, csv, html, txt (default: json)
+  -v, --verbose         Verbose output
+  -q, --quiet           Minimal output (only results)
+  --print-found         Print found accounts in real-time
+
+    Examples:
+      canopy -u johndoe
+      canopy -u johndoe -t 50 --timeout 15
+      canopy -u johndoe -o report.json --format json
+      canopy -u johndoe --categories social,gaming
+      canopy --list-categories
+```
+
 ## Installation
 Clone the repository:
 
