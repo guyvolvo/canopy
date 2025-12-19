@@ -1,7 +1,9 @@
-Canopy is a Python-based OSINT (Open-Source Intelligence) framework designed to help individuals discover, organize, and analyze publicly available information about their own digital footprint. \
-Note: Canopy was developed and tested exclusively on my own publicly available data as a learning and portfolio project.
+$ **Canopy-scanner**
 
-# Project Goals
+Canopy is a Python-based OSINT framework designed to help individuals discover, organize, and analyze publicly available information about their own digital footprint. \
+Note: Canopy was developed and tested exclusively on my own publicly available data as a learning and portfolio project, canopy was made as part of my IT and Cyber-security journey and may contain bugs.
+
+# 📌 Project Goals 
 
 - Understand how publicly available information is indexed and exposed online
 - Practice structured OSINT methodology using search engines
