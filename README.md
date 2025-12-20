@@ -31,7 +31,7 @@ cd Canopy
 ```
 
 
-```bash
+```sh
 usage: canopy [-h] [-u USERNAME] [-U USERNAMES] [-t THREADS] [--timeout TIMEOUT] [--delay DELAY]
                  [--rate-limit RATE_LIMIT] [-c CATEGORIES] [-p PLATFORMS] [--exclude EXCLUDE] [--only-found]
                  [--list-categories] [-o OUTPUT] [-f {json,csv,html,txt}] [-v] [-q] [--print-found]
